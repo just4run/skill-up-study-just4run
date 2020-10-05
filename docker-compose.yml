@@ -15,4 +15,3 @@ services:
       - ./docker/nginx/skillup.local.conf:/etc/nginx/conf.d/skillup.local.conf
     depends_on:
       - app
-
