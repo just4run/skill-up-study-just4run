@@ -23,22 +23,13 @@ echo '<br> <br> <br>';
 
 // _____TASK 2_____
 echo '<p style="background-color: #666; color:#fff; padding: 10px;">Задание 2</p>';
-//$number = (int)$_GET['p1'];
-//if ($number === 0 || $number < 0) {
-//    echo 'Number is zero';
-//} elseif ($number === 1) {
-//    echo 'Number is one';
-//} elseif ($number === 2) {
-//    echo 'Number is two';
-//} elseif ($number % 2 === 0) {
-//    echo "Number {$number} is even";
-//} else {
-//    echo "Number {$number} is odd";
-//}
-//
-//$message = $number % 2 === 0 ? 'even' : 'odd';
-//echo "Number {$number} is {$message}";
+$number = (int)$_GET['p1'] ?: "default";
+$message = "";
+$message .= ($number === 0) ? "zero. " : "";
+$message .= ($number < 0) ? "negative. " : "";
+$message .= ($number === 1) ? "one. " : "";
+$message .= ($number === 2) ? "two. ": "";
+$message .= ($number % 2 === 0) ? "{$number} is even" : "{$number} is odd";
+echo "{$number} is {$message}";
 
-echo '<img src="https://www.meme-arsenal.com/memes/b73d0ff9295a4a2fd3f0d8d1d872ebc0.jpg" />';
-echo '<br><p>Не успел, вскорее наверстаю упущенное</p>';
 // switch ($number) --> ugly ternary operators
