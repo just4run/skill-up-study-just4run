@@ -54,3 +54,27 @@ array_push($groups[0]['students'], [
 //var_dump($groups);
 
 
+$string = 'Hello World';
+//var_dump($string[0], $string[-1]);
+
+$a5 = [
+    'qwa-qwa',
+    1,
+    5,
+    3,
+    4,
+    'test'
+];
+
+natcasesort($a5);
+//var_dump($a5);
+
+$students = $groups [0]['students'];
+var_dump($students);
+
+usort($students, static function (array $a, array $b) {
+    return $a['age'] <=> $b['age'];
+}
+);
+
+var_dump($students);
