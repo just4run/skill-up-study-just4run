@@ -1,0 +1,46 @@
+table {
+    border-spacing: 0;
+    position: absolute;
+}
+
+table.first {
+    left: 10vw;
+}
+
+table.second {
+    right: 10vw;
+}
+
+table th,
+table td {
+    padding: 15px;
+}
+
+tr:nth-child(1) {
+    background: #222;
+    color: #fff;
+}
+
+tr:nth-child(3) {
+    background: #c1c1c1;
+}
+
+p {
+    position: absolute;
+    color: #666;
+}
+
+p:after,
+p:before {
+    content: " ---------- ";
+}
+
+p.zx {
+    left: 25vw;
+    top: 30vh;
+}
+
+p.xz {
+    right: 25vw;
+    top: 30vh;
+}

@@ -41,24 +41,24 @@ echo '<br> <br> <br>';
 echo '<p style="background-color: #666; color:#fff; padding: 10px;">Задание 3</p>';
 
 $tasks = [
-    'task-1' => [
-        'id' => 0,
+    [
+        'id' => '0',
         'title' => 'gardener',
         'description' => 'raise a cucumber',
         'owner' => 'Oleg',
         'deadline' => '20.12.2020',
         'status' => 'in processing',
     ],
-    'task-2' => [
-        'id' => 1,
+    [
+        'id' => '1',
         'title' => 'builder',
         'description' => 'home construction',
         'owner' => 'Igor',
         'deadline' => '03.03.2020',
         'status' => 'completed',
     ],
-    'task-3' => [
-        'id' => 2,
+    [
+        'id' => '2',
         'title' => 'herdsman',
         'description' => 'walk the pig',
         'owner' => 'Victor',
