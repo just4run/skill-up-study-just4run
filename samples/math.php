@@ -1,6 +1,5 @@
 <?php
 
-error_reporting(E_ALL);
 
 //var_dump((2 + 2) * 2 / 5 - 0.6);
 //
