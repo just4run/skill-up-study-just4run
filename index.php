@@ -1,41 +1,37 @@
 <?php
 
-//echo 'Hello World', "\n";
+$files = scandir(__DIR__);
+$elements = array_filter($files, static function (string $element) {
+    return $element[0] !== '.' && stripos($element, 'docker') === false;
+});
 
-//var_dump(1 == '1', 1 === '1');
-//var_dump(1 != 2, 1 != 1);
+$html = '';
+foreach ($elements as $element) {
+    $rout = __DIR__ . '/' . $element;
+    if (is_dir($rout)) {
+        $dir = scandir($rout);
+        $nestedElements = array_filter($dir, static function (string $element) {
+            return $element[0] !== '.';
+        });
+        foreach ($nestedElements as $nestedElement) {
+            $html .= "<li> <a href='/{$element}/{$nestedElement}'>{$element}/{$nestedElement}</li>";
+        }
+    } else {
+        $html .= "<li> <a href='/{$element}'>{$element}</li>";
+    }
+}
 
+?>
 
-$menu = [
-    [
-        'title' => 'Samples',
-        'children' => '',
-
-        [
-            'url' => '/samples/arrays.php',
-            'title' => 'Arrays',
-        ],
-        [
-            'url' => '/samples/basics.php',
-            'title' => 'Basics',
-        ],
-        [
-            'url' => '/samples/branching.php',
-            'title' => 'Branching',
-        ],
-        [
-            'url' => '/samples/html.php',
-            'title' => 'HTML',
-        ],
-        [
-            'url' => '/samples/math.php',
-            'title' => 'Math',
-        ],
-        [
-            'url' => '/samples/types.php',
-            'title' => 'Types',
-        ],
-    ]
-];
-
-var_dump($menu);
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>DOCUMENT</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+    <ul><?= $html?></ul>
+</body>
+</html>
