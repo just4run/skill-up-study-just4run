@@ -23,11 +23,11 @@
 //var_dump($count2);
 //$result = $count - $count2;
 
-//$int1 = 1;
-//$int2 = 2;
-//$int3 = 3;
-//$result = $int1++ + $int1 + $int2++ + ++$int3;
-//$result2 = $int1 + $int2 + $int3;
-//
-//
-//var_dump($result, $result2);
+$int1 = 1;
+$int2 = 2;
+$int3 = 3;
+$result = $int1++ + $int1 + $int2++ + ++$int3;
+$result2 = $int1 + $int2 + $int3;
+
+
+var_dump($result, $result2);
