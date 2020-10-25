@@ -1,14 +1,77 @@
-table {
-    border-spacing: 0;
-    position: absolute;
+/*============== CHAT PAGE ===============*/
+
+:active, :hover, :focus {
+    outline: 0 !important;
+    outline-offset: 0 !important;
 }
 
-table.first {
-    left: 10vw;
+.chat-form-page {
+    padding: 25px 0;
+    background: #f1f1f1;
+    font-family: 'Comfortaa', cursive;
 }
 
-table.second {
-    right: 10vw;
+.form {
+    padding: 40px;
+    border-radius: 20px;
+    background: #f1f1f1;
+    box-shadow: 20px 20px 40px #cdcdcd,
+    -20px -20px 40px #ffffff;
+}
+
+label {
+    margin-bottom: 20px !important;
+}
+
+.chat-form-page h1 {
+    color: #8A8A8A;
+}
+
+.chat-form {
+    display: inline-grid;
+    width: 100%;
+}
+
+input, textarea {
+    border: 1px solid #f1f1f1;
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px;
+    background: linear-gradient(145deg, #d9d9d9, #ffffff);
+    box-shadow: 20px 20px 40px #cdcdcd,
+    -20px -20px 40px #ffffff;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+::placeholder {
+    color: #222;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-buttons button {
+    color: #222;
+    border: 1px solid #f1f1f1;
+    padding: 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    background: linear-gradient(145deg, #ffffff, #d9d9d9);
+    box-shadow: 20px 20px 40px #c1c1c1,
+    -20px -20px 40px #ffffff;
+}
+
+.form-buttons button:hover {
+    background: #f1f1f1;
+    box-shadow: inset 20px 20px 40px #cdcdcd,
+    inset -20px -20px 40px #ffffff;
 }
 
 table th,
@@ -16,31 +79,10 @@ table td {
     padding: 15px;
 }
 
-tr:nth-child(1) {
-    background: #222;
-    color: #fff;
+table, tbody {
+    border: 0;
 }
 
-tr:nth-child(3) {
-    background: #c1c1c1;
-}
-
-p {
-    position: absolute;
-    color: #666;
-}
-
-p:after,
-p:before {
-    content: " ---------- ";
-}
-
-p.zx {
-    left: 25vw;
-    top: 30vh;
-}
-
-p.xz {
-    right: 25vw;
-    top: 30vh;
+tbody tr:nth-child(even) {
+    background-color: #DDD;
 }
