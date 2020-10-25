@@ -59,6 +59,6 @@ $content = json_encode($data, 0) . PHP_EOL;
 //$content = serialize($data) . PHP_EOL;
 file_put_contents(__DIR__ . '/storage', $content, FILE_APPEND);
 
-header('Location: /chat/');
+header('Location: /homework/2020.10.19/');
 
 exit;
